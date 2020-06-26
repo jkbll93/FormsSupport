@@ -1,0 +1,7 @@
+Create form for documents in web technology. Web page should save documents in server.
+
+Requirements:
+- Document class containing name, type (e.g. application, employment contract) and date of document creation
+- Each type should have its own class which contains all the basic + fields inherited from the Document class
+- Documents should be saved as files on the server
+- Display of files, e.g. using a GET query with name or the entire list

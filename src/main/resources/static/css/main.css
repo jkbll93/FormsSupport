@@ -1,0 +1,16 @@
+* {
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	line-height: 15px;
+}
+
+input{
+	width: 20%;
+}
+
+textarea{
+	width: 80%;
+	height: 2840px;
+	margin-left: 10%;
+}

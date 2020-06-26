@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    <head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Strona dodająca podania i umowy</title>
+
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+    	<noscript>
+            <h2>Twoja przeglądarka nie obsługuje języka Javascript</h2>
+        </noscript>
+        <header>
+        	<h1>
+	        	Proszę wybrać typ dokumentu:
+        	</h1>
+        </header>
+        <nav>
+	        <select id="type" name="type">
+	           	<option value="empty" selected=""></option>
+				<option value="form">Podanie</option>
+				<option value="contract">Umowa o pracę</option>
+			</select>
+			
+            <button id="save" name="save" hidden> 
+                Zapisz
+            </button>
+            <div id="showStatus" name="showStatus"></div>
+        </nav>
+        <article>
+        	<form id="formHeader" name="formHeader" hidden>
+				<input id="formFileName" name="formFileName" placeholder="Nazwa pliku"/>
+				<br>
+        		Dane składającego podanie:
+        		<br>
+        		<input id="yourFirstName" name="yourFirstName" placeholder="Twoje imię"/>
+        		<input id="yourSurname" name="yourSurname" placeholder="Twoje nazwisko"/>
+        		<br>
+        		Dane osoby do której składasz podanie:
+        		<br> 
+        		<input id="firstName" name="firstName" placeholder="imię osoby do której składasz podanie"/> 
+        		<input id="surname" name="surname" placeholder="nazwisko osoby do której składasz podanie"/> 
+        		<input id="position" name="position" placeholder="stanowisko osoby do której składasz podanie"/>
+        		<br>
+        		Treść podania:
+        	</form>
+        	<form id="contractHeader" name="contractHeader" hidden>
+                <input id="contractFileName" name="contractFileName" placeholder="Nazwa pliku"/>
+                <br>
+        		Umowa o pracę pomiędzy: 
+        		<br> 
+        		<input id="employerName" name="employerName" placeholder="imię pracodawcy"/>
+        		<input id="employerSurname" name="employerName" placeholder="nazwisko pracodawcy"/>
+        		reprezentującym firmę 
+        		<input id="companyName" name="companyName" placeholder="nazwa firmy"/>
+        		<br>
+        		zwanym dalej Pracodawcą, a 
+        		<br>
+        		<input id="employeeName" name="employeeName" placeholder="imię pracownika"/>
+        		<input id="employeeSurname" name="employeeSurname" placeholder="nazwisko pracownika"/>
+        		zwanym dalej Pracownikiem.
+        		<br>
+        		Treść umowy:
+        	</form>
+
+        	<textarea id="textArea" type="text" name="textArea" hidden></textarea>
+
+        </article>
+
+        <script src="js/newScript.js"></script>
+    </body>
+</html>
