@@ -54,7 +54,9 @@ function saveFile(fileName, typeValue, valuesToSend, data){
 
     xhr.setRequestHeader('documentType', typeValue);
     xhr.setRequestHeader('values', valuesToSend);
-    xhr.setRequestHeader('creationDate', date.toString());
+
+    var dateString = date.toString();
+    xhr.setRequestHeader('creationDate', dateString.substring(0, dateString.indexOf("(")-1));
 
     xhr.onload = function(){
         var response = JSON.parse(xhr.responseText);
